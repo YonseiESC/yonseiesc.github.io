@@ -11,15 +11,15 @@ order: 10
 
 ## 세션
 
-20 FALL : computer Vision & Natural Language Processing
-20 SUMMER : DeepLearning with PyTorch
-20 SPRING : Machine Learning In Probabilistic Perspective
-19 Winter : Machine Learning with ISL
-19 FALL : Bayesian Statistical Method
-19 SUMMER : R library 연습
-19 SPRING : Data Mining & Analysis
-18 FALL : Regression Analysis & Dimensionality Reduction
-18 SUMMER : Unsupervised Learning / Data Visualization / Data Crawling
+20 FALL : computer Vision & Natural Language Processing <br>
+20 SUMMER : DeepLearning with PyTorch <br>
+20 SPRING : Machine Learning In Probabilistic Perspective <br>
+19 Winter : Machine Learning with ISL <br>
+19 FALL : Bayesian Statistical Method<br>
+19 SUMMER : R library 연습<br>
+19 SPRING : Data Mining & Analysis<br>
+18 FALL : Regression Analysis & Dimensionality Reduction<br>
+18 SUMMER : Unsupervised Learning / Data Visualization / Data Crawling<br>
 18 SPRING : Data Mining & Analysis
 
 [작성중]
