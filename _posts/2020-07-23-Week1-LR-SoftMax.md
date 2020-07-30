@@ -1,23 +1,20 @@
 ---
 layout: post
-title: 'Test'
-subtitle: 'test'
+title: 'WEEK1-LR-SOFTMAX'
+subtitle: '2020 SUMMER'
 categories: dl
 tags: dl
 comments: true
 ---
 
 # 2020 SUMMER 1st SESSION [LR - SOFTMAX]
-
 # 1. Linear regression
-
 ## 1-1. 세션소개
 
 
 # 이번 방학에 다룰 주제는? 딥러닝이란? 
 
-<img src="/assets/img/img1.png"></img>
-
+![mse](/assets/img/img1.PNG)
 source : https://medium.com/@harish_6956/what-is-machine-learning-deep-learning-7788604004da
 
 1) 인공지능 (AI) : 기계가 인간의 행동을 따라하게끔 하는 기술
@@ -78,13 +75,13 @@ def show_gif(fname):
 
 
  3-1) 뉴런과 다층신경망이란?
-![img2.png](/assets/img/img2.png) 
+![img2.png](/assets/img/img2.PNG) 
 
 source : https://bi.snu.ac.kr/Courses/IntroAI/slides/NN.pdf
 
 
 
-![img3.png](/assets/img/img3.png)
+![img3.png](/assets/img/img3.PNG)
 
 https://cedar.buffalo.edu/~srihari/CSE574/Chap5/Chap5.0-Biology.pdf
 
@@ -122,7 +119,7 @@ Loss function은 실제값과 예측값의 차이에 대한 함수이다. Loss f
 
  이 때의 예측값은 weight에 따라서 값이 달라진다. Initilization 단계에서 처음에 w를 우리가 설정을 하고, 점점 학습을 통하면서 최적의 w를 찾아나간다. 또한 이 weight는 모델의 파라미터와 관련이 있다. 모델의 파라미터란 결국 특정 분포에서 도출된 Y값 분포의 모수를 의미한다. 예를 들어 Y가 연속형이면 Normal dist의 mean이 모수가 되며(var는 고정 가정), Binary class라면 이항분포의 p가 모수가 될 것이다. Y가 Multi class를 가지는 범주형 변수라면 다항분포에서의 $\pi$가 모수가 된다.
  
- 예를 들어 Simple linear regression에서는 $ w = {[\beta_0 \;\; \beta_1]}^T $이고($ X = {[1 \;\; x]}^T $) Y가 비롯된 정규분포에서의 모수(분산은 고정 가정) 다음과 같다. $ \mu_i = E[Y_i|X] = \beta_0 + \beta_1 X_i $
+ 예를 들어 Simple linear regression에서는 $$ w = {[\beta_0 \;\; \beta_1]}^T $$ 이고 ( $$ X = {[1 \;\; x]}^T $$ ) Y가 비롯된 정규분포에서의 모수(분산은 고정 가정) 다음과 같다. $$ \mu_i = E[Y_i|X] = \beta_0 + \beta_1 X_i $$
 
 $$ loss_{lr} = (\hat{y}-y)^2 = (w^T X-y)^2 $$
 
@@ -136,6 +133,7 @@ $$ Cost = \dfrac{1}{N} \sum^{N}_{n=1} (\hat{y_n}-y_n)^2 $$
  
 reference : http://jaejunyoo.blogspot.com/2018/02/minimizing-negative-log-likelihood-in-kor-3.html
 
+$$
 \begin{equation*}
 Cost =  \begin{bmatrix}
 x_{1,1} & \dots & x_{m,1} \\ \vdots & \ddots & \vdots \\ x_{n,1} & \dots & x_{n,m} 
@@ -143,10 +141,11 @@ x_{1,1} & \dots & x_{m,1} \\ \vdots & \ddots & \vdots \\ x_{n,1} & \dots & x_{n,
 \begin{bmatrix}
 w_1 \\ \vdots \\ w_m
 \end{bmatrix}
-- \begin{bmatrix} 
+\begin{bmatrix} 
 y_1 \\ \vdots \\ y_n
 \end{bmatrix} \\ 
 \end{equation*}
+$$
 
 $$ Cost = \dfrac{1}{N}L^TL $$
 
@@ -449,11 +448,11 @@ $$ \nabla f = (\dfrac{\partial f}{\partial w_1},\dots,\dfrac{\partial f}{\partia
 
 $$ w=w-\alpha\dfrac{\partial loss}{\partial w} $$
 
-Gradient descent는 결국 최적의 $ \mathbf{w} $를 찾아나가는 방식이다.
+Gradient descent는 결국 최적의 $$ \mathbf{w} $$를 찾아나가는 방식이다.
 
-이 때 $\alpha$는 learning rate를 의미하며 hyper-parameter로서 사용자가 조정을 해서 최적의 값을 튜닝해야한다. $\alpha$가 너무 큰 경우에는 폭이 너무 커서 global minimum이 아니라 local minimum으로 잘못 수령할 수 있으며, 너무 작은 경우에는 학습 속도가 오래 걸린다는 단점이 있다.
+이 때 $$ \alpha $$는 learning rate를 의미하며 hyper-parameter로서 사용자가 조정을 해서 최적의 값을 튜닝해야한다. $$ \alpha $$가 너무 큰 경우에는 폭이 너무 커서 global minimum이 아니라 local minimum으로 잘못 수령할 수 있으며, 너무 작은 경우에는 학습 속도가 오래 걸린다는 단점이 있다.
 
-그 방식의 프로세스는 다음과 같다. 등산을 하고 산 중턱에 도착했는데 밤이 되고 앞이 하나도 보이지 않는다고 하자. 이 때 한 걸음 한 걸음씩 내딛으면서 하산하는 길을 찾는 것이 바로 Gradient descent 방식이다. 값을 조금씩 바꿔가면서 loss를 최소화하는 $ \mathbf{w} $를 찾는 것이다.
+그 방식의 프로세스는 다음과 같다. 등산을 하고 산 중턱에 도착했는데 밤이 되고 앞이 하나도 보이지 않는다고 하자. 이 때 한 걸음 한 걸음씩 내딛으면서 하산하는 길을 찾는 것이 바로 Gradient descent 방식이다. 값을 조금씩 바꿔가면서 loss를 최소화하는 $$ \mathbf{w} $$를 찾는 것이다.
 
 이런 과정을 우리는 함수의 최적화라고 한다.
 최적화란 목적함수(여기서는 Loss)의 함수값을 최적화(최대화 혹은 최소화)시키는 파라미터 조합을 찾는 문제이다.
